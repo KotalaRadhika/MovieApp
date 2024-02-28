@@ -1,0 +1,38 @@
+server:
+  port: 5000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://3.214.34.206:5000/eureka
+
+spring:
+  application:
+    name: movieapp-api-gateway
+  config:
+    import: optional:configserver:http://3.143.151.64:5000
+  cloud:
+    discovery:
+      enabled: true
+    gateway:
+      routes:
+        - id: user-registration
+          uri: lb://user-registration
+          predicates:
+            - Path=/movie/**
+        - id: login-service
+          uri: lb://login-service
+          predicates:
+            - Path=/movie/**
+        - id: movie-service
+          uri: lb://movie-service
+          predicates:
+            - Path=/movie/**
+        - id: wishlist-service
+          uri: lb://wishlist-service
+          predicates:
+            - Path=/movie/wishlist/**
+
+
+
+

@@ -1,0 +1,62 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .login, .register{
+    padding-right: 10vh;
+  }
+  
+  .carousel-item{
+    height: 40rem;
+    background: rgb(37, 36, 36);
+    position: relative;
+    
+  }
+  .container{
+    padding-bottom: 50px;
+  }
+  .overlay-image{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media(max-width: 768px){
+    .box{
+      padding: 10px;
+    }
+  }
+
+  @media screen and (max-width:768px){
+    .box{
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+  @media screen and (max-width:576px){
+    .login, .register{
+      padding-right: 5vh;
+    }
+  }
+  @media screen and (max-width:480px){
+    .box{
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+  }
+
+  /* for poster section */
+
+  .bodySection{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .course-sec{
+    padding: 20px;
+  }
+  .course-img{
+    width: 80%;
+    /* height: 250vh; */
+    border-radius: 10px;
+  }

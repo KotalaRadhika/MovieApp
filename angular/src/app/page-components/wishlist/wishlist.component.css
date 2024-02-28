@@ -1,0 +1,153 @@
+.movieSection{
+    /* background-image: url("https://cdn.pixabay.com/photo/2015/05/21/23/15/movie-778063_1280.jpg"); */
+    /* background-image: url("data:image/jpeg;base64,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"); */
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-film-film-retro-album-banner-image_187729.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+  } 
+
+
+  
+  .notecardcontainer
+  {
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 20px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  }
+  .notecard {
+    max-width: 400px;
+    margin: 2%;
+  }
+  .wishlist-card {
+    /* max-width: 400px; */
+    position: relative;
+    width: calc(33.33% - 40px); /* Adjust card width for responsiveness */
+    margin: 20px; /* Adjust margin between cards */
+    background-color: rgba(220, 243, 222, 0.918);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  /* .wishlist-card mat-card-header,
+  .wishlist-card mat-card-content {
+    padding: 10px;
+  } */
+  .wishlist-card mat-card-header {
+    /* padding: 10px; */
+  } 
+  .wishlist-card mat-card-content p {
+     /* font-size: medium; */
+     font-style: inherit;
+     /* margin-top: 10px; */
+     /* padding-bottom: 40px; Add padding to accommodate the delete button */
+  }
+  .delete-button {
+    /* position: absolute; */
+    bottom: 10px;
+    left: 10px;
+    color: rgb(255, 251, 251);
+    background-color: #009970; /* Add background color to the delete button */
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px; /* Add padding to the button for better appearance */
+    border-radius: 5px;
+    margin: auto;
+  }
+  @media screen and (max-width: 992px) {
+    .wishlist-card {
+      width: calc(50% - 40px); /* Adjust card width for smaller screens */
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .wishlist-card {
+      width: calc(100% - 40px); /* Adjust card width for mobile devices */
+    }
+  }
+  .example-header-image {
+    /* background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg'); */
+    background-size: cover;
+  }
+  /* .wishlist-card {
+    max-width: 400px;
+    margin: 2%;
+    background-color: white;
+  } */
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  .search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .search-container label {
+    padding-left: 200px;
+    margin-bottom: 5px; /* Add margin to move the label down */
+    margin-right: 8px; /* Adjust the margin to move the label to the right */
+  }
+  .search-input {
+    width: 200px; /* Set the desired width for the text field */
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+    box-sizing: border-box; /* Include padding and border in the width */
+    margin-top: 50px;
+  }
+  .search-button {
+    padding: 10px 16px;
+    font-size: 14px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 50px;
+  }
+  .search-button:hover {
+    background-color: #0056B3;
+  }
+  .text-danger-container {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+.text-danger {
+  color: red;
+  font-size: 18px;
+  padding-left: 250px;
+}
+  @media screen and (max-width: 768px) {
+    header {
+      padding: 10px;
+    }
+    footer {
+      padding: 10px;
+  }
+  }
+  .center-button{
+    place-items: center;
+    display: grid;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+  }
+
+  

@@ -1,0 +1,25 @@
+server:
+  port: 5000
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://radhika-eureka-ebs-env-1.eba-ueswdptm.us-east-1.elasticbeanstalk.com/eureka
+spring:
+  application:
+    name: movie-config-server
+  cloud:
+    discovery:
+      enabled: true
+    config:
+      server:
+        git:
+          uri: https://gitlab-cts.stackroute.in/Radhika.Kotala/movieapp-configuration
+          clone-on-start: true
+          username: Radhika.Kotala
+          password: P@ssw0rd
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

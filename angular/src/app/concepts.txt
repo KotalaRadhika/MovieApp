@@ -1,0 +1,133 @@
+life-cycle
+life-cylce hooks are methods that angular invokes when compoenents are created, rendered and destroyed over time
+ 
+https://drive.google.com/file/d/170FrFznkOumeJa4FpDO1AaSIBn0kxpPj/view
+
+intialization:
+constructor, ngOnChanges
+
+content projection:
+ngOnInit, ngDoCheck
+
+content initialization:
+ngAfterContentInit, ngAfterContentChecked
+
+View intialization:
+ngAfterViewInit,ngAfterViewChecked
+
+Component Destruction:
+ngOnDestroy 
+
+<router-outlet>
+In angular, SPA consists of multiple components that represents different views or pages of the application
+when you navigate from one view to another within an SPA, angular needs a way to render the appropriate component for each view dynamically
+
+router-outlet  is a directive provided by angualr Router module that acts a placeholder in application layout
+where angular dynamically renders the component associated with the current router
+
+checks the route from routes file 
+
+ActivatedRoute
+used in component class to access information about cuurent route, such as parameters and query parameters
+example:
+router includes a parameter like /:id can access the value of id using ActivatedRoute
+
+routerLink
+used in template to navigate to different routes
+
+angualr.json - central configuartion
+configuration file used in angualr to define varius settings and configuartions related to 
+project structure - project, root, sourceRoot, prefix
+buld process - architect, build, serve, test
+asset mangement - assets, styles, scripts
+
+package.json
+metadata file used in project to manage dependencies, scripts - can be executed using npm or yarn cmnds
+
+main.ts
+serves as entry point for bootstrapping the angualr application
+imports root module of angualr application - app module
+
+Authguard
+mechanism used to control access to certain routes in application based on whether user is aythenticated or not 
+it's  a way to protect routes and ensure only authenticated users can access 
+
+it's a class that implements CanActivate interface 
+
+inside authguard class define the logic to determine whether user is authenticated or not
+checking the user is loggedin, verifying their session token
+
+adding canActivate property to route configuration
+
+
+app component.ts
+main component that serves as the root component of entire application
+it's the frst component that loaded when application starts
+
+Template-driven forms:
+
+rely on angualr's directives and two-way data binding  [(ngModel)] to create and manage form elements directly in the component template
+form controls are defined directly in HTML template of component using angualr's ngModel directive for data binding and validation
+can use this for simple forms with basic validation requirements
+
+Reactive forms:
+model-driven and rely on reactive approach using TS to create and manage form controls programtically
+defines form controls and their grouping(form groups) prohra,tically using TS classes and angular FormControl, FormGroup 
+asynchronous form validation making it easier to eprform validation tasks that involves asynchronous operations like HTTP requests
+suitable for complex forms with dynamic validation
+
+FormControl:
+represents single form control such as input field, checkbox, radio button etc 
+it encapsulates teh state of an individual form control, including its value, validation status and whether it's been touched or modified by user
+can create a FormControl instance directly when defining a form control in your ocmpoennt
+
+FormGroup:
+represents a collection of form controls grouped together
+used to create a group of related form controls such as form with multiple fields
+FormGroup instance can contain multiple FormControl instances and other nested FormGroup instances
+can create a FormGroup instance using FormBuilder service or directly by instantiating
+
+FormBuilder:
+provides convinient methods for creating instances of FormControl, FormGroup
+can inject FormBuilder into your components and use its methods to create form controls and groups 
+
+
+Validation status:
+provides info about current validation status of form controls and can be sued in angualr templates or component logic to customize the user interface
+or behaviour based on the validation state
+
+touched:
+whether control has been touched or blured by users
+it becomes true once control has been focused and then blurred
+control.touched
+
+untouched:
+The form control has not been interacted with by the user
+
+dirty:
+whether value of control has changed
+becomed true once the control's value has been changed
+control.dirty
+
+pristine:
+whether control's value has not changed
+becomes true if control's value has not been changed
+control.pristine
+
+valid:
+whether control's calye is valid based on validation
+becomed true if control's value passes all it's validators
+control.valid
+
+invalid:
+whether control's value is invalid based on it's validators
+becomes true if control value fails any of its validators
+control.invalid
+
+
+
+
+
+
+
+

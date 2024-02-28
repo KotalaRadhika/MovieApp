@@ -1,0 +1,19 @@
+server:
+  port: '5000'
+spring:
+  application:
+    name: movie-service
+  output:
+    ansi:
+      enabled: always
+
+  doc:
+    swagger-ui:
+      path: /swagger-ui
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: 'http://3.214.34.206:5000/eureka'
+rapidApiKey: '"006140acafmsh30e2cce6c00040bp1a98d9jsn42e273414646"'
+rapidApiHost: '"imdb-top-100-movies.p.rapidapi.com"'

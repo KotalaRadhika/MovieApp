@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+<div class="movieSection">
+  <div>
+    <div>
+      <section>
+        <div id="header" style="text-align: center; font-weight: 500; background-color: rgba(184, 226, 188, 0.918);">
+          <input type="search" id="rankInput" placeholder="Search by Rank Ex: top5" aria-label="Search"
+            [(ngModel)]="rankInput" name="rankInput">
+          <button class="btn btn-outline-success" style=" font-weight: 500;" (click)="getById()"
+            type="submit">Search</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div id="movieByRank">
+    <div class="container">
+      <div class="row" style="display: inline-flex;">
+        <section>
+          <h2 *ngIf="movieById && movieById.title" style="text-align: center;">Search Results for {{ rankInput }}</h2>
+        </section>
+        <div class="column">
+          <div class="card" *ngIf="movieById">
+            <div class="card-block">
+              <!-- Use interpolation to display issue title and description-->
+              <h4><b>{{movieById.title}}</b></h4>
+              <h4>Rank: {{movieById.rank}}</h4>
+              <img src="{{movieById.image}}" alt="No Image" height="150vh">
+
+              <p>Description: {{movieById.description}}</p>
+              <p>Genre: {{movieById.genre}}</p>
+              <h4>Year: {{movieById.year}}</h4>
+              <h4>Rating: {{movieById.rating}}<i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></h4>
+              <button class="btn btn-primary" (click)="addToWishlist(movieById)">Add to Watchlist</button>
+            </div>
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div>
+  <app-footer></app-footer>
+</div>

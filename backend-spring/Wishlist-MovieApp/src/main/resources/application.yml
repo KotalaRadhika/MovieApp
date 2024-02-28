@@ -1,0 +1,49 @@
+server:
+  port: 5000
+spring:
+  application:
+    name: wishlist-service
+  output:
+    ansi:
+      enabled: always
+  config:
+    import: optional:configserver:http://3.143.151.64:5000
+
+  # Ehcache
+  cache:
+    jcache:
+      config: ehcache.xml
+
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      addToWishListBreaker:
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 10
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 6s
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        slidingWindowType: COUNT_BASED
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: 'http://3.214.34.206:5000/eureka'
+  instance:
+    prefer-ip-address: true
+

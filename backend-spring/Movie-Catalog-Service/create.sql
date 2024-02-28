@@ -1,0 +1,1 @@
+create table movies (rank integer not null, rating float(53) not null, year integer not null, big_image varchar(255), description varchar(255), genre varchar(255), id varchar(255) not null, image varchar(255), imdb_link varchar(255), imdbid varchar(255), thumbnail varchar(255), title varchar(255), primary key (id)) engine=InnoDB;
