@@ -1,0 +1,16 @@
+#use this for config server
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://radhika-eureka-ebs-env-1.eba-ueswdptm.us-east-1.elasticbeanstalk.com/eureka
+spring:  
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://radhika-movie-db.cn88qyk2qcw1.us-east-2.rds.amazonaws.com:3306/movie_db
+    password: rootroot
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+
